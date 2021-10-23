@@ -1,7 +1,5 @@
 defmodule Math do
-  def sum a, b do
-    a + b
-  end
+  def sum(a, b), do: a + b
 
   # The trailing question mark (?) means that this function returns a boolean
   def zero?(0), do: true
@@ -16,12 +14,12 @@ fun.(0)
 #Default arguments
 defmodule Concat do
 # If a function with default values has multiple clauses, it is required to create a function head (a function definition without a body) for declaring defaults:
-  def join a, b, sep \\ " "
+  def join(a, b, sep \\ " ")
 
   #The leading underscore in _sep means that the variable will be ignored in this function
-  def join a, b, _sep when is_nil b do: a
+  def join(a, b, _sep) when is_nil b do: a
 
-  def join a, b, sep do: a <> sep <> b
+  def join(a, b, sep), do: a <> sep <> b
 end
 
 
